@@ -54,14 +54,5 @@ Public reproducible benchmark datasets
 
 Energy-aware forecasting perspective
 
-Also, the implementation of the proposed SpikeLoRA-TS framework, along with scripts required to reproduce the main experimental results
+Also, the implementation of the proposed SpikeLoRA-TS framework, along with the scripts required to reproduce the main experimental results
 
-📎 Citation
-
-If you use this repository or datasets, please cite:
-
-@article{Ayasi2026SpikeLoRA,
-  title={SpikeLoRA: Parameter-Efficient Spiking Neural Models for Multi-Horizon Forecasting in Renewable and Smart Energy Time Series},
-  journal={Neural Computing and Applications},
-  year={2026}
-}
