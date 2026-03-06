@@ -54,6 +54,8 @@ Public reproducible benchmark datasets
 
 Energy-aware forecasting perspective
 
+Also, the implementation of the proposed SpikeLoRA-TS framework, along with scripts required to reproduce the main experimental results
+
 📎 Citation
 
 If you use this repository or datasets, please cite:
