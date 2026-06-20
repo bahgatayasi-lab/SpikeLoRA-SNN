@@ -193,53 +193,13 @@ Depending on which experiment blocks are executed, the script can generate:
 
 Some summary tables are created as pandas DataFrames inside the script and printed or displayed in the notebook. They can be exported manually if needed.
 
-## Relation to SpikeLoRA-X
-
-SpikeLoRA-SNN is the original forecasting and adaptation repository. It provides the spiking forecasting backbone, the LoRA and SpikeLoRA adaptation mechanisms, and the cleaned benchmark datasets.
-
-SpikeLoRA-X is not a replacement for this repository. SpikeLoRA-X keeps the SpikeLoRA forecasting backbone unchanged and adds a post-hoc Responsible-AI analysis layer for:
-
-- horizon-wise attribution;
-- attribution-fidelity testing;
-- physical-plausibility checking;
-- spike-activity and edge-readiness reporting.
-
-SpikeLoRA-X repository:
-
-https://github.com/bahgatayasi-lab/SpikeLoRA-X
-
-## Citation
-
-If you use this repository, please cite the SpikeLoRA-SNN / SpikeLoRA-TS paper and, when relevant, the SpikeLoRA-X CAEPIA/LNAI extension.
-
-```bibtex
-@article{ayasi2026spikelora_ts,
-  title   = {SpikeLoRA: Parameter-Efficient Spiking Neural Models for Multi-Horizon Forecasting in Renewable and Smart Energy Time Series},
-  author  = {Ayasi, Bahgat Waleed Deeb and coauthors},
-  journal = {To be updated with final venue information},
-  year    = {2026},
-  note    = {Code and benchmark datasets: https://github.com/bahgatayasi-lab/SpikeLoRA-SNN}
-}
-```
-
-For the explainability extension:
-
-```bibtex
-@inproceedings{ayasi2026spikelorax,
-  title     = {SpikeLoRA-X: Explainable, Responsible, and Energy-Efficient Spiking Neural Networks for Multi-Horizon Renewable-Energy Forecasting at the Edge},
-  author    = {Ayasi, Bahgat Waleed Deeb and coauthors},
-  booktitle = {Proceedings of CAEPIA 2026},
-  series    = {Lecture Notes in Artificial Intelligence},
-  year      = {2026},
-  note      = {Code: https://github.com/bahgatayasi-lab/SpikeLoRA-X}
-}
-```
-
-Update the BibTeX entries with the final author list, venue, DOI, and page numbers once available.
-
 ## License
 
-Add a license file before final public release. If no license is added, external users do not have clear permission to reuse, modify, or redistribute the code and datasets.
+This repository is released under the **MIT License**. This permits free reuse, modification, distribution, sublicensing, and use in academic, research, educational, and commercial projects, provided that the copyright notice and license text are preserved.
+
+Unless otherwise stated, the MIT License applies to the source code, scripts, documentation, and original repository materials. The cleaned benchmark CSV files are provided for reproducibility and reuse; users should also respect the licensing terms and citation requirements of the original data providers.
+
+See the [`LICENSE`](LICENSE) file for the full license text.
 
 ## Notes
 
