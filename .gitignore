@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+checkpoints/
+predictions/
+*.pt
+*.pth
+*.ckpt
+Palestine-Solar.csv
+Palestine-wind.csv
+Turky-Wind-power-Turbine.csv
+Moroco-power-consumption.csv

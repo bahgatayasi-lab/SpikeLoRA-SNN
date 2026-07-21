@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the associated SpikeLoRA-TS article and this software release."
+title: "SpikeLoRA-TS: Corrected R2 Reproducibility Repository"
+type: software
+authors:
+  - family-names: "Ayasi"
+    given-names: "Bahgat Waleed Deeb"
+  - family-names: "Obaid"
+    given-names: "Mahmoud"
+repository-code: "https://github.com/bahgatayasi-lab/SpikeLoRA-SNN"
+version: "v1.0-NCAA-R2"
+date-released: "2026-07-21"
+license: MIT

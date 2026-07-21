@@ -1,0 +1,8 @@
+# Compatible dependency specification for SpikeLoRA-TS-R2-corrected-v1.
+# The completed Colab run used Python 3.12.13 and PyTorch 2.11.0+cu128.
+# Colab normally supplies the CUDA-enabled PyTorch build.
+torch>=2.1
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+psutil>=5.9
