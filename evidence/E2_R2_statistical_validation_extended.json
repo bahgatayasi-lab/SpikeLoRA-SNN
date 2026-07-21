@@ -1,0 +1,65 @@
+{
+  "comparison": "SpikeLoRA-TS vs LoRA; positive relative improvement favors SpikeLoRA-TS",
+  "n_paired_runs": 36,
+  "wins_spikelora": 25,
+  "losses_spikelora": 11,
+  "win_rate_pct": 69.44444444444444,
+  "mean_relative_improvement_pct": 2.1538906314141317,
+  "median_relative_improvement_pct": 1.764993821950083,
+  "bootstrap_mean_relative_improvement_ci95_pct": [
+    -2.143908964187034,
+    6.312237276429139
+  ],
+  "bootstrap_median_relative_improvement_ci95_pct": [
+    0.11299880045227384,
+    4.950803145473268
+  ],
+  "wilcoxon_relative_two_sided_statistic": 219.0,
+  "wilcoxon_relative_two_sided_p": 0.07434044909314252,
+  "wilcoxon_relative_one_sided_p_spikelora_better": 0.03717022454657126,
+  "rank_biserial_correlation": 0.34234234234234234,
+  "exact_sign_test_two_sided_p": 0.028816719655878845,
+  "exact_sign_test_one_sided_p_spikelora_better": 0.014408359827939423,
+  "raw_rmse_wilcoxon_p_from_original": 0.181412478297716,
+  "per_task": {
+    "EC": {
+      "n": 9,
+      "wins": 6,
+      "mean_relative_improvement_pct": -0.2050278116836698,
+      "median_relative_improvement_pct": 0.7099659908713732
+    },
+    "SR": {
+      "n": 9,
+      "wins": 7,
+      "mean_relative_improvement_pct": 5.966640549914431,
+      "median_relative_improvement_pct": 6.003946043271992
+    },
+    "WP": {
+      "n": 9,
+      "wins": 4,
+      "mean_relative_improvement_pct": -0.2623928922766858,
+      "median_relative_improvement_pct": -0.11804811543430983
+    },
+    "WS": {
+      "n": 9,
+      "wins": 8,
+      "mean_relative_improvement_pct": 3.1163426797024503,
+      "median_relative_improvement_pct": 4.602697661473468
+    }
+  },
+  "interpretation": "Directional wins are more frequent than chance by the exact sign test, while the magnitude-sensitive Wilcoxon test remains non-significant because gains vary substantially across tasks and scales.",
+  "condition_level_sensitivity": {
+    "n_task_fraction_cells": 12,
+    "wins_spikelora": 8,
+    "losses_spikelora": 4,
+    "win_rate_pct": 66.66666666666667,
+    "exact_sign_test_two_sided_p": 0.3876953125,
+    "wilcoxon_raw_two_sided_statistic": 34.0,
+    "wilcoxon_raw_two_sided_p": 0.7333984375,
+    "wilcoxon_relative_two_sided_statistic": 16.0,
+    "wilcoxon_relative_two_sided_p": 0.0771484375,
+    "mean_relative_improvement_pct": 2.977209048661399,
+    "median_relative_improvement_pct": 2.968729403948156,
+    "interpretation": "Sensitivity analysis after averaging the three seeds within each task-fraction cell; no condition-level test reaches 0.05."
+  }
+}

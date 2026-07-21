@@ -1,0 +1,13 @@
+{
+  "bootstrap_ci95_high": 60.14272239760007,
+  "bootstrap_ci95_low": -56.321552694681635,
+  "mean_rmse_improvement_b_minus_a": 3.622030350843488,
+  "median_rmse_improvement_b_minus_a": 0.12536168850426144,
+  "method_a": "spikelora",
+  "method_b": "lora",
+  "n_paired_conditions": 36,
+  "tie_rate_pct": 0.0,
+  "wilcoxon_p_value": 0.181412478297716,
+  "wilcoxon_statistic": 247.0,
+  "win_rate_a_pct": 69.44444444444444
+}

@@ -1,0 +1,16 @@
+SpikeLoRA-TS-R2-corrected-v1 environment record
+================================================
+Verified directly from the completed Colab notebook output:
+- Python: 3.12.13 (GCC 11.4.0)
+- PyTorch: 2.11.0+cu128
+- CUDA available: True
+- GPU: NVIDIA Tesla T4
+
+Protocol-level settings are stored in configs/R2_protocol_config.json.
+Dataset schemas, file hashes, periods, frequencies, and split counts are stored in data/R2_dataset_audit.csv.
+
+The completed notebook did not print exact NumPy, pandas, SciPy, or psutil versions. The compatible lower bounds used by the experiment runner are recorded in requirements_R2.txt. Do not claim an exact package lock for libraries whose versions were not captured. For a future archival release, execute `python -m pip freeze > environment_full_freeze.txt` in the same runtime immediately after the final run.
+
+Reproducibility note
+--------------------
+The runner requests deterministic behavior where supported. During the completed run, PyTorch warned that a CUDA memory-efficient attention backward kernel was non-deterministic. This warning is disclosed in the manuscript; three seeds and confidence intervals are used to quantify variability.
