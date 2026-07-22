@@ -1,9 +1,11 @@
-# SpikeLoRA-TS: corrected R2 reproducibility repository
+# SpikeLoRA-TS:  Reproducibility Repository
 
-Protocol: `SpikeLoRA-TS-R2-corrected-v1`
+Protocol: `SpikeLoRA-TS-v1`
 
-This public repository reproduces the corrected major-revision experiments for sparse low-rank adaptation of an SNN-TCN on solar radiation, wind speed, wind power, and electricity-consumption forecasting.
-
+This repository provides the implementation, configurations, experimental
+results, and reproducibility materials for SpikeLoRA-TS, a parameter-efficient
+adaptation method for spiking temporal forecasting of renewable-energy and
+smart-grid time series.
 ## Contents
 
 - `code/spikelora_ts_r2_colab.py`: standalone experiment runner.
@@ -99,11 +101,12 @@ python code/spikelora_ts_r2_colab.py summaries \
 
 Completed experimental keys are appended to CSV files and skipped on rerun unless `--force` is supplied.
 
-## Canonical repository and release
+## Reproducible release
 
-Repository: `https://github.com/bahgatayasi-lab/SpikeLoRA-SNN`
-
-The corrected manuscript experiments use protocol `SpikeLoRA-TS-R2-corrected-v1`. The immutable release corresponding to the revision is tagged `v1.0-NCAA-R2`. Earlier scripts are retained under `legacy/` only for traceability and must not be used for the corrected results.
+The results reported in the associated manuscript correspond to the archived
+release listed on the GitHub Releases page. The `legacy/` directory contains
+developmental scripts that are not required to reproduce the reported results.
+Use the runner, configuration, and result files documented in this README.
 
 ## License
 
