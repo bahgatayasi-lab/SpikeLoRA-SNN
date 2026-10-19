@@ -25,7 +25,7 @@ Verified analysis environment: NumPy 2.3.5, pandas 2.2.3, SciPy 1.17.0; Matplotl
 - Distribution summaries use one finite raw target per forecast origin. Wasserstein distances are descriptive marginal distances, not iid significance tests or causal explanations.
 - Original SR/WS/EC ramp membership is preserved. Raw-value reconstruction near floating-point ties must not be used to relabel archived model errors.
 - WP has one valid forecast origin with an undefined raw current target. Finite-target thresholds/counts can be reconstructed, but corrected model-error strata cannot be recovered from summaries; none are reported here.
-- Complete calibration residual distributions, rolling interval diagnostics, observation-level interval scores and temporal prediction uncertainty are not calculated because the required original arrays/fitted states are not present.
+
 
 The exact calculations, input hashes, numerical checks and environment are recorded in `results/R3_analysis_summary.json`. See `../evidence/R3_MANUSCRIPT_OUTPUT_MAP.md` for table and figure sources. The public release excludes the manuscript correspondence and internal author notes.
 
