@@ -1,13 +1,14 @@
 cff-version: 1.2.0
-message: "Please cite the associated SpikeLoRA-TS article and this software release."
-title: "SpikeLoRA-TS: Corrected R2 Reproducibility Repository"
+message: "Please cite this versioned software and reanalysis release. The associated manuscript is identified by its title; no publication DOI is asserted."
+title: "SpikeLoRA-TS: Sparse Low-Rank Adaptation of Spiking Temporal Models for Multi-Horizon Energy Forecasting"
 type: software
 authors:
   - family-names: ""
     given-names: "  "
+    given-names: ""
   - family-names: ""
     given-names: ""
 repository-code: "https://github.com/bahgatayasi-lab/SpikeLoRA-SNN"
-version: "v1.0-NCAA-R2"
-date-released: "2026-07-21"
+version: "v1.1-NCAA-R3"
+date-released: ""
 license: MIT

@@ -1,0 +1,9 @@
+source_order,signs,statistic
+"Morocco,Palestine,Turkey","-1,-1,-1",-0.0199898117701
+"Morocco,Palestine,Turkey","-1,-1,1",-0.0213593308403
+"Morocco,Palestine,Turkey","-1,1,-1",0.0215881154878
+"Morocco,Palestine,Turkey","-1,1,1",0.0202185964176
+"Morocco,Palestine,Turkey","1,-1,-1",-0.0202185964176
+"Morocco,Palestine,Turkey","1,-1,1",-0.0215881154878
+"Morocco,Palestine,Turkey","1,1,-1",0.0213593308403
+"Morocco,Palestine,Turkey","1,1,1",0.0199898117701
