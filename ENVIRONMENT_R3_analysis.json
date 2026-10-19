@@ -1,0 +1,15 @@
+{
+  "scope": "R3 arithmetic and dataset-diagnostic verification only; no model training or inference",
+  "python": "3.13.5",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "verified_derived_csv_count": 17,
+  "csv_checks": "17/17 byte-identical to supplied R3 outputs",
+  "summary_check": "scientific sections match parsed JSON; key order/environment not a byte-identity requirement",
+  "original_protocol": "SpikeLoRA-TS-R2-corrected-v1",
+  "original_config_hash": "1c553ec25a0e"
+}

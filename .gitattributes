@@ -1,0 +1,3 @@
+# Preserve byte-level R3 input/output hashes on all checkout platforms.
+reanalysis/inputs/* -text
+reanalysis/results/* -text

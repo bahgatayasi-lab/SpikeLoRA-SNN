@@ -1,0 +1,172 @@
+{
+  "no_training": true,
+  "no_model_inference": true,
+  "statistics": {
+    "run_wins": 25,
+    "condition_wins": 8,
+    "run_sign_independence_reference_p": 0.028816719655878845,
+    "condition_sign_independence_reference_p": 0.3876953125,
+    "run_relative_wilcoxon_independence_reference_p": 0.07434044909314252,
+    "condition_relative_wilcoxon_independence_reference_p": 0.0771484375,
+    "source_block_two_sided_reference_p": 1.0,
+    "source_block_transformations": 8,
+    "source_balanced_geometric_reduction_pct": 1.979134015295832,
+    "note": "Source-block symmetry/independence assumptions are unverified with three sources. No confirmatory population inference; no independent resampling of seeds or fractions.",
+    "E4_raw_paired": {
+      "n_seeds": 3,
+      "mean": 2.4408873495838748,
+      "sd": 2.8298217205430864,
+      "ci_low": -4.58877950394741,
+      "ci_high": 9.47055420311516,
+      "wins": 2
+    },
+    "E4_relative_paired": {
+      "n_seeds": 3,
+      "mean": 3.3379384385314412,
+      "sd": 3.855206021270731,
+      "ci_low": -6.2389242254741255,
+      "ci_high": 12.914801102537009,
+      "wins": 2
+    }
+  },
+  "data_audit": {
+    "SR": {
+      "dataset_sha256": "d30c392eddf014df2a416d4071fc87fbde68c18b8222041368028de94289252f",
+      "same_E1_E2_test": true,
+      "same_E1_E2_calib": true,
+      "n_valid_windows": 105001,
+      "split_counts": {
+        "base_train": 47226,
+        "base_val": 5226,
+        "adapt_pool": 20976,
+        "adapt_val": 5226,
+        "calib": 5226,
+        "test": 21001
+      },
+      "finite_ramp_origins": 21001,
+      "nonfinite_ramp_origins": 0,
+      "nonfinite_origin_times": [],
+      "raw_target_finite_ramp_q33": 120.0,
+      "raw_target_finite_ramp_q67": 530.0,
+      "raw_target_finite_ramp_counts": [
+        7008,
+        7005,
+        6988
+      ],
+      "ramp_median": 321.0,
+      "ramp_q90": 849.0,
+      "ramp_zero_pct": 24.67501547545355,
+      "warning": "Raw-data ramp reconstruction is not a replacement for archived inverse-transformed prediction-level regime membership, especially at ties."
+    },
+    "WS": {
+      "dataset_sha256": "3f0adac44d33e1dccaba3b871e9d7b872ff9529151a4a3028d672307d75cedd0",
+      "same_E1_E2_test": true,
+      "same_E1_E2_calib": true,
+      "n_valid_windows": 105001,
+      "split_counts": {
+        "base_train": 47226,
+        "base_val": 5226,
+        "adapt_pool": 20976,
+        "adapt_val": 5226,
+        "calib": 5226,
+        "test": 21001
+      },
+      "finite_ramp_origins": 21001,
+      "nonfinite_ramp_origins": 0,
+      "nonfinite_origin_times": [],
+      "raw_target_finite_ramp_q33": 0.3999999761581421,
+      "raw_target_finite_ramp_q67": 1.0,
+      "raw_target_finite_ramp_counts": [
+        7319,
+        7210,
+        6472
+      ],
+      "ramp_median": 0.6000000238418579,
+      "ramp_q90": 1.600000023841858,
+      "ramp_zero_pct": 1.1618494357411553,
+      "warning": "Raw-data ramp reconstruction is not a replacement for archived inverse-transformed prediction-level regime membership, especially at ties."
+    },
+    "WP": {
+      "dataset_sha256": "768521f386057b400c9eb5e5d45c124a0c4b5129e0f13d8ff4350099d14e5870",
+      "same_E1_E2_test": true,
+      "same_E1_E2_calib": true,
+      "n_valid_windows": 48342,
+      "split_counts": {
+        "base_train": 21729,
+        "base_val": 2394,
+        "adapt_pool": 9644,
+        "adapt_val": 2393,
+        "calib": 2393,
+        "test": 9669
+      },
+      "finite_ramp_origins": 9668,
+      "nonfinite_ramp_origins": 1,
+      "nonfinite_origin_times": [
+        "2018-10-31 15:40:00"
+      ],
+      "raw_target_finite_ramp_q33": 222.3702189127604,
+      "raw_target_finite_ramp_q67": 799.0782063802083,
+      "raw_target_finite_ramp_counts": [
+        3223,
+        3222,
+        3223
+      ],
+      "ramp_median": 502.26458740234375,
+      "ramp_q90": 1585.9615478515625,
+      "ramp_zero_pct": 13.167149358709143,
+      "warning": "Raw-data ramp reconstruction is not a replacement for archived inverse-transformed prediction-level regime membership, especially at ties."
+    },
+    "EC": {
+      "dataset_sha256": "9c44b9af0cb1923a3fcbcef08826e13f8a405ebf68a8a072597b0feb17e45769",
+      "same_E1_E2_test": true,
+      "same_E1_E2_calib": true,
+      "n_valid_windows": 52297,
+      "split_counts": {
+        "base_train": 23509,
+        "base_val": 2591,
+        "adapt_pool": 10435,
+        "adapt_val": 2591,
+        "calib": 2591,
+        "test": 10460
+      },
+      "finite_ramp_origins": 10460,
+      "nonfinite_ramp_origins": 0,
+      "nonfinite_origin_times": [],
+      "raw_target_finite_ramp_q33": 3421.6822916666665,
+      "raw_target_finite_ramp_q67": 8343.806640625,
+      "raw_target_finite_ramp_counts": [
+        3487,
+        3487,
+        3486
+      ],
+      "ramp_median": 6094.0634765625,
+      "ramp_q90": 11624.740234375,
+      "ramp_zero_pct": 0.0,
+      "warning": "Raw-data ramp reconstruction is not a replacement for archived inverse-transformed prediction-level regime membership, especially at ties."
+    }
+  },
+  "SR_WS_shared_columns_identical": {
+    "Temperature": true,
+    "Relative Humidity": true,
+    "Cloud Type": true,
+    "Wind Direction": true,
+    "Dew Point": true,
+    "date": true,
+    "Wind Speed": true,
+    "Pressure": true
+  },
+  "input_hashes": {
+    "E1_R2_results.csv": "bc4701c6f55f22ba76a4bd1498581a8b51b10973e5eadee140d28bf35f5c03da",
+    "E3_R2_pairwise_transfer_results.csv": "08481b51320f1f3bc6b1e7f53c2799de68b299078023a29cf812d2b5157347de",
+    "E2_R2_fewshot_results.csv": "e0e985ce810cb91b9e03923934b746f45e8f034953fa055d95b2948662e33f9a",
+    "E4_R2_ablation_results.csv": "ac37542b18d4b2d2e6c4d0bd7ac560e910feda23dd274623ae5348060a775beb",
+    "R2_dataset_audit.csv": "0f65d88a04e4d894eb325f6c9cd18bae8bd6f840e05cbfd2065e58b31a09d4bb",
+    "E2_R2_ramp_regime_analysis.csv": "b22a588d5dcd6a3c8dbc3873e06e573a3133eeed9818078683e6afe551c6f71c",
+    "R2_protocol_config.json": "59d856726a9b6632be320d3501473fd92886f4b463cb90c5c813ccdd4e0e5ebb"
+  },
+  "environment": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0"
+  }
+}

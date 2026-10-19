@@ -1,113 +1,66 @@
-# SpikeLoRA-TS:  Reproducibility Repository
+# SpikeLoRA-TS: Sparse Low-Rank Adaptation of Spiking Temporal Models
 
-Protocol: `SpikeLoRA-TS-v1`
+Reproducibility repository for **SpikeLoRA-TS: Sparse Low-Rank Adaptation of Spiking Temporal Models for Multi-Horizon Energy Forecasting**.
 
-This repository provides the implementation, configurations, experimental
-results, and reproducibility materials for SpikeLoRA-TS, a parameter-efficient
-adaptation method for spiking temporal forecasting of renewable-energy and
-smart-grid time series.
-## Contents
+## Versioned evidence
 
-- `code/spikelora_ts_r2_colab.py`: standalone experiment runner.
-- `code/SpikeLoRA_TS_R2_Experiments_After_finish_execution.ipynb`: completed Colab notebook.
-- `configs/R2_protocol_config.json`: exact model and training protocol.
-- `data/R2_dataset_audit.csv`: explicit schemas, hashes, periods, frequencies, horizons, and split counts.
-- `results/`: per-seed E1-E4 results and generated summaries.
-- `evidence/`: claim audit and extended E2 statistical validation.
-- `ENVIRONMENT_R2.txt`: verified runtime details and determinism caveat.
-- `DATA_README.md`: data placement and validation instructions.
+- **Forecasting protocol:** `SpikeLoRA-TS-R2-corrected-v1`, unchanged.
+- **Historical release:** [`v1.0-NCAA-R2`](https://github.com/bahgatayasi-lab/SpikeLoRA-SNN/releases/tag/v1.0-NCAA-R2), unchanged.
+- **R3 update:** additional reanalysis of retained records and original-dataset diagnostics, prepared for the separate release `v1.1-NCAA-R3`. Check the Releases page to confirm publication; the presence of these files does not itself mean a GitHub Release has been published.
 
-## Installation
+The original forecasting-specific LIF-gated adapter and E1-E4 experimental programme are retained. No forecasting model was retrained or re-evaluated for R3. A software release is not a statement of journal acceptance.
 
-In a fresh environment:
+## Verify the R3 records without training or original datasets
 
-```bash
-python -m pip install -r requirements_R2.txt
+```sh
+python reanalysis/verify_release.py --strict-bytes
 ```
 
-A CUDA-enabled PyTorch build appropriate to the local driver is required for GPU execution. The completed run used the PyTorch build supplied by Google Colab.
+This standard-library-only command checks the 17 approved derived CSV tables, scientific scripts, seven original input copies, and the preserved R2 records. Fifteen CSVs are stored directly. Two additional approved tables are materialized locally when absent: the calendar-composition CSV is decompressed losslessly from `reanalysis/retained_tables/`, and the E2 horizon table is calculated from the retained per-run metrics. Both must match the original approved CSV SHA-256 exactly. No model, network connection, credentials, or original datasets are needed for this verification. Existing different tables are not silently replaced.
 
-## Dataset audit and smoke test
+To build a curated release ZIP and its checksum locally:
 
-```bash
-python code/spikelora_ts_r2_colab.py audit \
-  --data-dir /path/to/data \
-  --output-dir /path/to/results
-
-python code/spikelora_ts_r2_colab.py smoke \
-  --data-dir /path/to/data \
-  --output-dir /path/to/results
+```sh
+python reanalysis/verify_release.py --strict-bytes --build-package
 ```
 
-Confirm that the audit reports `PowerConsumption_Zone1` for EC before launching the full matrix.
+The resulting ZIP includes all 17 plain CSVs. It excludes private manuscript correspondence, reviewer comments, internal author notes, third-party datasets, unavailable model binaries, and publication automation.
 
-## E1: in-domain forecasting baselines
+## Reproduce all R3 analyses from the original datasets, without training
 
-```bash
-python code/spikelora_ts_r2_colab.py e1 \
-  --data-dir /path/to/data \
-  --output-dir /path/to/results \
-  --tasks SR,WS,WP,EC \
-  --models mlp,lstm,gru,tcn,patchtst,itransformer,snn_tcn \
-  --seeds 0,1,2
+Use Python 3.13 and the versions recorded in `requirements_R3_analysis.txt`. Obtain the four original datasets separately using `DATA_README.md`; exact dataset hashes are checked.
+
+```sh
+python -m pip install -r requirements_R3_analysis.txt
+python reanalysis/reanalyse_r3.py --data-dir /path/to/original/datasets
+python reanalysis/make_condition_figure.py
+python reanalysis/verify_release.py
 ```
 
-## E2: temporal few-shot adaptation
+The unchanged analysis script performs statistical arithmetic and read-only data diagnostics. It does not import a model framework, load weights, train models, or generate replacement predictions. Its default output is `reanalysis/results/`; use `--out-dir /path/to/new/results` to preserve distributed outputs. The figure script reads the default output directory and creates manuscript Figure 5 under the historical filename `Fig4_E2_condition_effects_R3.pdf`.
 
-```bash
-python code/spikelora_ts_r2_colab.py e2 \
-  --data-dir /path/to/data \
-  --output-dir /path/to/results \
-  --tasks SR,WS,WP,EC \
-  --fractions 0.1,0.2,0.5 \
-  --seeds 0,1,2
-```
+Verification after regeneration allows only recorded-environment/key-order differences in the summary JSON; `--strict-bytes` requires exact JSON bytes too. The 17 CSVs reproduced byte-for-byte during revision preparation. This does not independently verify historical training runs.
 
-## E4: representative mechanism/sensitivity ablation
+## Evidence and interpretation
 
-```bash
-python code/spikelora_ts_r2_colab.py e4 \
-  --data-dir /path/to/data \
-  --output-dir /path/to/results \
-  --tasks SR \
-  --fractions 0.1 \
-  --seeds 0,1,2
-```
+Original result counts are E1: 84, E2: 108, E3: 54, E4: 24. They are not counts of independent scientific replications. R3 emphasizes condition/task/source dependence, contextual dense-reference accuracy gaps, calendar and optimization exposure, joint encoding/gate sparsity, horizon-specific coverage and width, and paired seed-level ramp uncertainty.
 
-## E3: pairwise transfer boundary tests
+Hierarchical aggregation is not a fitted mixed-effects model. Source-block sign-flip calculations are exploratory under stated assumptions. Head-only similarity is descriptive, not demonstrated equivalence. The ablations do not establish LIF-specific causal superiority or an encoding-only effect. Conformal coverage is not a deployment guarantee under drift.
 
-```bash
-python code/spikelora_ts_r2_colab.py e3 \
-  --data-dir /path/to/data \
-  --output-dir /path/to/results \
-  --source WS --target SR \
-  --fractions 0.1,0.2,0.5 \
-  --seeds 0,1,2
+The historical WP ramp diagnostic has a non-finite-value handling failure. Target-based finite thresholds/counts can be reconstructed; corrected WP model-error strata are not available and are not claimed.
 
-python code/spikelora_ts_r2_colab.py e3 \
-  --data-dir /path/to/data \
-  --output-dir /path/to/results \
-  --source WS --target WP \
-  --fractions 0.1,0.2,0.5 \
-  --seeds 0,1,2
-```
+See [R3 corrections and scope](evidence/R3_CORRECTIONS_AND_SCOPE.md), [artifact availability](ARTIFACT_AVAILABILITY.md), [manuscript-output mapping](evidence/R3_MANUSCRIPT_OUTPUT_MAP.md), and [analysis details](reanalysis/README.md). Historical R2 audit interpretations identified in the correction note are superseded; their original files are retained for provenance.
 
-## Regenerate summaries
+## Repository layout
 
-```bash
-python code/spikelora_ts_r2_colab.py summaries \
-  --output-dir /path/to/results
-```
+`code/`, `configs/`, `results/`, and `ENVIRONMENT_R2.txt` preserve the original R2 forecasting materials. `reanalysis/` contains R3 analysis, retained inputs and derived records. The root manifests identify scientific file hashes, exact input-source copies, and unchanged R2 files. `ENVIRONMENT_R3_analysis.json` is separate from the historical training environment. `legacy/` is earlier development material, not corrected experimental evidence.
 
-Completed experimental keys are appended to CSV files and skipped on rerun unless `--force` is supplied.
+Historical `prediction_file` and `base_checkpoint` fields are runtime path references, not downloadable artifacts. Original prediction arrays, model checkpoints and complete calibration-residual arrays are not distributed. See `ARTIFACT_AVAILABILITY.md`.
 
-## Reproducible release
+## Original training commands are not the R3 reanalysis route
 
-The results reported in the associated manuscript correspond to the archived
-release listed on the GitHub Releases page. The `legacy/` directory contains
-developmental scripts that are not required to reproduce the reported results.
-Use the runner, configuration, and result files documented in this README.
+The archived runner and configuration remain unchanged. E1-E4 training commands retrain models; consult the [R2 README](https://github.com/bahgatayasi-lab/SpikeLoRA-SNN/blob/v1.0-NCAA-R2/README.md) for that historical workflow. Its CLI constructs a default configuration rather than loading the archived JSON: the recorded run enabled `save_predictions`, whereas the CLI default is false.
 
-## License
+## Citation, access and license
 
-The software is distributed under the MIT License in `LICENSE`. Third-party datasets remain subject to their original licences and are not redistributed in the corrected release tree.
+Use `CITATION.cff` and identify the manuscript by title. No accepted-publication DOI is asserted. This named public repository is not an anonymized reviewer-access route. Software retains the existing MIT license; third-party data remain subject to their original terms.

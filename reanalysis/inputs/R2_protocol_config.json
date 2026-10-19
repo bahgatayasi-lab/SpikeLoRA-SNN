@@ -1,0 +1,80 @@
+{
+  "adaptation_split": [
+    0.45,
+    0.05,
+    0.2,
+    0.05,
+    0.05,
+    0.2
+  ],
+  "adapter_targets": [
+    "in_proj",
+    "head"
+  ],
+  "batch_size": 128,
+  "calendar_features": [
+    "hour",
+    "dayofweek",
+    "month"
+  ],
+  "delta_threshold": 0.05,
+  "deterministic": true,
+  "dropout": 0.1,
+  "e1_split": [
+    0.7,
+    0.05,
+    0.05,
+    0.2
+  ],
+  "encoder_mode": "delta",
+  "fewshot_fractions": [
+    0.1,
+    0.2,
+    0.5
+  ],
+  "forward_fill_limit": 2,
+  "grad_clip": 1.0,
+  "horizons": [
+    1,
+    2,
+    4,
+    8,
+    24
+  ],
+  "lif_tau": 2.0,
+  "lif_threshold": 1.0,
+  "lookback": 96,
+  "lora_alpha": 16.0,
+  "lora_rank": 8,
+  "lr_adapt_fullft": 0.001,
+  "lr_adapt_peft": 0.005,
+  "lr_full": 0.001,
+  "lr_transformer": 0.0005,
+  "max_epochs_adapt": 25,
+  "max_epochs_base": 40,
+  "max_epochs_e1": 40,
+  "measure_latency_batches": 20,
+  "mlp_hidden": 256,
+  "num_workers": 0,
+  "patch_len": 16,
+  "patch_stride": 8,
+  "patience": 7,
+  "protocol_id": "SpikeLoRA-TS-R2-corrected-v1",
+  "rnn_hidden": 128,
+  "rnn_layers": 2,
+  "save_predictions": true,
+  "snn_channels": [
+    64,
+    64,
+    64
+  ],
+  "spike_steps": 8,
+  "spikelora_threshold": 0.05,
+  "tcn_channels": 128,
+  "tcn_levels": 3,
+  "transformer_d_model": 128,
+  "transformer_ff": 256,
+  "transformer_heads": 4,
+  "transformer_layers": 3,
+  "weight_decay": 0.0001
+}
