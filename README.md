@@ -61,6 +61,4 @@ Historical `prediction_file` and `base_checkpoint` fields are runtime path refer
 
 The archived runner and configuration remain unchanged. E1-E4 training commands retrain models; consult the [R2 README](https://github.com/bahgatayasi-lab/SpikeLoRA-SNN/blob/v1.0-NCAA-R2/README.md) for that historical workflow. Its CLI constructs a default configuration rather than loading the archived JSON: the recorded run enabled `save_predictions`, whereas the CLI default is false.
 
-## Citation, access and license
 
-Use `CITATION.cff` and identify the manuscript by title. No accepted-publication DOI is asserted. This named public repository is not an anonymized reviewer-access route. Software retains the existing MIT license; third-party data remain subject to their original terms.
