@@ -8,7 +8,7 @@ Reproducibility repository for **SpikeLoRA-TS: Sparse Low-Rank Adaptation of Spi
 - **Historical release:** [`v1.0-NCAA-R2`](https://github.com/bahgatayasi-lab/SpikeLoRA-SNN/releases/tag/v1.0-NCAA-R2), unchanged.
 - **R3 update:** additional reanalysis of retained records and original-dataset diagnostics, prepared for the separate release `v1.1-NCAA-R3`. Check the Releases page to confirm publication; the presence of these files does not itself mean a GitHub Release has been published.
 
-The original forecasting-specific LIF-gated adapter and E1-E4 experimental programme are retained. No forecasting model was retrained or re-evaluated for R3. A software release is not a statement of journal acceptance.
+The original forecasting-specific LIF-gated adapter and E1-E4 experimental programme are retained. No forecasting model was retrained or re-evaluated for R3. 
 
 ## Verify the R3 records without training or original datasets
 
