@@ -2,7 +2,7 @@
 
 Prepared release tag: `v1.1-NCAA-R3`.
 
-This update adds verified reanalysis of the retained corrected R2 records and original-dataset diagnostics. No forecasting model was retrained or re-evaluated, and no missing predictions were reconstructed. The original adapter and experimental programme are preserved.
+This update adds verified reanalysis of the retained corrected R2 records and original-dataset diagnostics. No forecasting model was retrained or re-evaluated. The original adapter and experimental programme are preserved.
 
 ## Added
 
@@ -21,8 +21,3 @@ The historical protocol remains `SpikeLoRA-TS-R2-corrected-v1`. R3 is not a rena
 
 The R2 tag/release, forecasting code, configuration, original numerical records and historical audit documents remain unchanged. Only the landing README/citation metadata are updated; separately identified R3 materials are added. Original data are not silently replaced.
 
-## Availability and scope
-
-The curated package excludes private correspondence, reviewer comments, author-only notes, third-party datasets and unavailable model/prediction binaries. Read `ARTIFACT_AVAILABILITY.md`. This public repository is not an anonymous review route. Software-release publication does not imply journal acceptance or independent verification of historical training.
-
-The GitHub Release must be published separately; these notes alone do not create a tag or Release object.
